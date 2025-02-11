@@ -1,3 +1,36 @@
-schema = 1
+schema = 3
 
 [mod]
+  [mod."github.com/godbus/dbus/v5"]
+    version = "v5.1.0"
+    hash = "sha256-xOCMJpQK3KTmHTPn/CdqI4j0eENCtMmJDgAIoYqYOEY="
+  [mod."github.com/jwijenbergh/eduoauth-go"]
+    version = "v0.0.0-20240524103755-aef66b41e1c2"
+    hash = "sha256-gx8B6kAr56jEOSFH5BmSOgOoS0kXrtuYgr17mA3za2I="
+  [mod."github.com/jwijenbergh/purego"]
+    version = "v0.0.0-20240527152122-d7876464a49c"
+    hash = "sha256-KSQY9yZ3eb9/SxjR1VDivMehMajeAdqG8OKwwLldL4E="
+  [mod."github.com/jwijenbergh/puregotk"]
+    version = "v0.0.0-20240527152221-b010cb9a4ca8"
+    hash = "sha256-7m2NVsJ6tIrfS0pZ6+cSzrLmzl6A3+auzG9eOx1KPjM="
+  [mod."github.com/youmark/pkcs8"]
+    version = "v0.0.0-20240424034433-3c2c7870ae76"
+    hash = "sha256-2BrmzIMtu/K1VScJ8Bze2eb/QEsNm5EKYuLWXBTPbTI="
+  [mod."golang.org/x/crypto"]
+    version = "v0.23.0"
+    hash = "sha256-6hZjb/OazWFBef0C/aH63l49YQnzCh2vpIduzyfSSG8="
+  [mod."golang.org/x/exp"]
+    version = "v0.0.0-20240525044651-4c93da0ed11d"
+    hash = "sha256-CeDwEj7EJXr3QzrJNzwU07EQM2cfFdqarbMtESxOUf8="
+  [mod."golang.org/x/sys"]
+    version = "v0.20.0"
+    hash = "sha256-mowlaoG2k4n1c1rApWef5EMiXd3I77CsUi8jPh6pTYA="
+  [mod."golang.org/x/term"]
+    version = "v0.20.0"
+    hash = "sha256-kU+OVJbYktTIn4ZTAdomsOjL069Vj45sdroEMRKaRDI="
+  [mod."golang.org/x/text"]
+    version = "v0.15.0"
+    hash = "sha256-pBnj0AEkfkvZf+3bN7h6epCD2kurw59clDP7yWvxKlk="
+  [mod."software.sslmate.com/src/go-pkcs12"]
+    version = "v0.4.0"
+    hash = "sha256-G5xZg8mVpPfjpDLHBl7nSqBDiyFduNxLVs1hMsAfvF8="
