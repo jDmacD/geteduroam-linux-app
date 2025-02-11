@@ -20,5 +20,8 @@ pkgs.mkShell {
   packages = [
     goEnv
     gomod2nix
+    pkgs.gtk4
+    pkgs.libadwaita
+    pkgs.pkg-config
   ];
 }
