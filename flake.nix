@@ -12,15 +12,25 @@
       (system:
         let
           pkgs = nixpkgs.legacyPackages.${system};
-
-          # The current default sdk for macOS fails to compile go projects, so we use a newer one for now.
-          # This has no effect on other platforms.
           callPackage = pkgs.darwin.apple_sdk_11_0.callPackage or pkgs.callPackage;
         in
         {
-          packages.default = callPackage ./. {
-            inherit (gomod2nix.legacyPackages.${system}) buildGoApplication;
+          packages = {
+            gui = callPackage ./. {
+              inherit (gomod2nix.legacyPackages.${system}) buildGoApplication;
+              target = "gui";
+            };
+            cli = callPackage ./. {
+              inherit (gomod2nix.legacyPackages.${system}) buildGoApplication;
+              target = "cli";
+            };
+            notifcheck = callPackage ./. {
+              inherit (gomod2nix.legacyPackages.${system}) buildGoApplication;
+              target = "notifcheck";
+            };
+            default = self.packages.${system}.gui;
           };
+          
           devShells.default = callPackage ./shell.nix {
             inherit (gomod2nix.legacyPackages.${system}) mkGoEnv gomod2nix;
           };
