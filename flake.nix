@@ -28,7 +28,15 @@
               inherit (gomod2nix.legacyPackages.${system}) buildGoApplication;
               target = "notifcheck";
             };
-            default = self.packages.${system}.gui;
+            full = pkgs.symlinkJoin {
+              name = "geteduroam-full";
+              paths = [
+                self.packages.${system}.gui
+                self.packages.${system}.cli
+                self.packages.${system}.notifcheck
+              ];
+            };
+            default = self.packages.${system}.full;
           };
           
           devShells.default = callPackage ./shell.nix {
@@ -37,3 +45,4 @@
         })
     );
 }
+
